@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Alegreya Sans", sans-serif;
+  letter-spacing: 0.03rem;
+}

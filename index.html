@@ -200,9 +200,9 @@
       <div class="creator__president">
         <div class="creator__president-image">
           <img
-            src=""
+            src="images/president.png"
             alt="president-image"
-            class="creator__president-image-pix"
+            class="creator__president-image--pix"
           />
         </div>
         <div class="creator__president-bio">
@@ -250,7 +250,11 @@
           </p>
         </div>
         <div class="creator__ceo-image">
-          <img src="" alt="ceo-image" class="creator__ceo-image-pix" />
+          <img
+            src="images/ceo.png"
+            alt="ceo-image"
+            class="creator__ceo-image--pix"
+          />
         </div>
       </div>
     </section>
@@ -265,11 +269,15 @@
           doloremque debitis temporibus voluptates, voluptas aliquid inventore
           quae asperiores unde culpa.
         </p>
-        <button class="career__btn">OPEN POSITION</button>
+        <button class="career__btn btn">OPEN POSITION</button>
       </div>
 
       <div class="career__image">
-        <img src="" alt="career-image" class="career__image-pix" />
+        <img
+          src="images/career.png"
+          alt="career-image"
+          class="career__image-pix"
+        />
       </div>
     </section>
 
@@ -317,66 +325,87 @@
           Kwara State, Nigeria <br />
           +234 903 345 567
         </p>
-        <p class="footer__company-email">anterilorin@gmail.com</p>
+        <p class="footer__company-email">livetriviagameanter@gmail.com</p>
       </div>
 
-      <div class="footer__download">
-        <h2 class="footer__download-main">Download</h2>
-        <a href="#" role="button" class="footer__download-android">
-          <img src="" alt="android-img" class="footer__download-android--img" />
-          <p class="footer__download-android--text">Download for</p>
-          <h2 class="footer__download-android--text">ANDROID</h2>
-        </a>
-        <a href="#" role="button" class="footer__download-playStore">
-          <img
-            src=""
-            alt="playStore-img"
-            class="footer__download-playStore--img"
-          />
-          <p class="footer__download-playStore--text">Get it on</p>
-          <h2 class="footer__download-playStore--text">GOOGLE PLAY</h2>
-        </a>
-        <a href="#" role="button" class="footer__download-apple">
-          <img src="" alt="apple-img" class="footer__download-apple--img" />
-          <p class="footer__download-apple--text">Download from</p>
-          <h2 class="footer__download-apple--text">APP STORE</h2>
-        </a>
+      <div class="footer__options">
+        <h2 class="footer__options-text">Download</h2>
+        <h2 class="footer__options-main">Social Media</h2>
       </div>
-      <div class="footer__social">
-        <div class="footer__social-facebook">
-          <img
-            src=""
-            alt="facebook-logo"
-            class="footer__social-facebook--logo"
-          />
+
+      <!-- Contacts -->
+      <div class="contacts">
+        <div class="footer__download">
+          <a href="#" role="button" class="footer__download-android">
+            <i class="fab fa-facebook" class="footer__download-android--img">
+            </i>
+            <div class="flex">
+              <p class="footer__download-android--text">Download for</p>
+              <h2 class="footer__download-android--text">ANDROID</h2>
+            </div>
+          </a>
+
+          <a href="#" role="button" class="footer__download-playStore">
+            <i class="fab fa-google-play"></i>
+            <div class="flex">
+              <p class="footer__download-playStore--text">Get it on</p>
+              <h2 class="footer__download-playStore--text">GOOGLE PLAY</h2>
+            </div>
+          </a>
+
+          <a href="#" role="button" class="footer__download-apple">
+            <i class="fab fa-apple"></i>
+            <div class="flex">
+              <p class="footer__download-apple--text">Download from</p>
+              <h2 class="footer__download-apple--text">APP STORE</h2>
+            </div>
+          </a>
         </div>
-        <div class="footer__social-twitter">
-          <img src="" alt="twitter-logo" class="footer__social-twitter--logo" />
-        </div>
-        <div class="footer__social-instagram">
-          <img
-            src=""
-            alt="instagram-logo"
-            class="footer__social-instagram--logo"
-          />
-        </div>
-        <div class="footer__social-youTube">
-          <img src="" alt="youTube-logo" class="footer__social-youTube--logo" />
+        <div class="footer__social">
+          <div class="footer__social-facebook">
+            <i class="fab fa-facebook"></i>
+          </div>
+          <div class="footer__social-twitter">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="footer__social-instagram">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="footer__social-youTube">
+            <i class="fab fa-youtube"></i>
+          </div>
         </div>
       </div>
 
       <div class="footer__footer">
         <p class="footer__footer-text">
-          Copyright &copy; 2021 <span>Live Trivia Game</span> All Rights
-          Reserved.
+          Copyright &copy; 2021
+          <span> <strong> Live Trivia Game </strong></span> All Rights Reserved.
         </p>
       </div>
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-youtube"></i>
-      <i class="fab fa-apple"></i>
-      <i class="fab fa-google-play"></i>
+
+      <div class="footer__games">
+        <div class="footer__games-instant">
+          <h2 class="footer__games-instant--heading">Instant</h2>
+          <p class="footer__games-instant--heading">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
+            voluptas quibusdam incidunt excepturi nostrum explicabo quaerat,
+            molestias facere nam vero. Sequi, harum repellat quasi tenetur quos
+            qui unde dicta blanditiis!
+          </p>
+          <button class="footer__games-instant--btn btn">PLAY NOW</button>
+        </div>
+        <div class="footer__games-live">
+          <h2 class="footer__games-live--heading">LIVE TRIVIA GAME</h2>
+          <p class="footer__games-live--heading">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum
+            voluptas quibusdam incidunt excepturi nostrum explicabo quaerat,
+            molestias facere nam vero. Sequi, harum repellat quasi tenetur quos
+            qui unde dicta blanditiis!
+          </p>
+          <button class="footer__games-live--btn btn">DOWNLOAD NOW</button>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

@@ -1,0 +1,11 @@
+.btn {
+  border-radius: 1.875rem;
+  font-size: 0.75rem;
+  border: 1px solid red;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  outline: unset;
+  cursor: pointer;
+  padding: 0.8rem 1.2rem;
+  background-color: transparent; }

@@ -195,3 +195,330 @@
     }
   }
 }
+
+// CREATORS SECTION
+.creator {
+  padding-left: 10rem;
+  padding-right: 10rem;
+
+  &__president {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 7rem;
+
+    &-image {
+      width: 23rem;
+      height: 23rem;
+
+      &--pix {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+
+    &-bio {
+      width: 90%;
+
+      &--title {
+        color: $black-color;
+      }
+
+      &--text {
+        padding-top: 1rem;
+        color: $light-gray;
+      }
+    }
+  }
+
+  &__ceo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 7rem;
+    margin-top: 5rem;
+
+    &-image {
+      width: 23rem;
+      height: 23rem;
+
+      &--pix {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-bio {
+      width: 100%;
+
+      &--title {
+        color: $black-color;
+      }
+
+      &--text {
+        padding-top: 1rem;
+        color: $light-gray;
+      }
+    }
+  }
+}
+
+// CAREER'S SECTION
+.career {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $dark-purple;
+  padding: 0;
+
+  &__text {
+    color: $white-color;
+    padding-left: 5rem;
+
+    &-sub {
+      margin-top: 2rem;
+      width: 60%;
+    }
+  }
+
+  &__btn {
+    color: $white-color;
+    margin-top: 2rem;
+  }
+
+  &__image {
+    position: relative;
+    width: 100rem;
+    height: 24rem;
+
+    &-pix {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__image::before {
+    position: absolute;
+    content: " ";
+    background-color: $purple-color;
+    height: 10rem;
+    width: 3rem;
+    top: 30%;
+    left: -7.5%;
+  }
+}
+
+// Newsletter
+
+.newsletter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8rem;
+  position: relative;
+  padding-bottom: 20rem;
+
+  &__text {
+    &-main {
+      margin-bottom: 0.5rem;
+    }
+
+    &-sub {
+      margin-bottom: 1.5rem;
+
+      .emphasis {
+        color: red;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    &-email {
+      padding: 1rem;
+      font-size: 1rem;
+
+      &:focus {
+        outline: unset;
+      }
+    }
+
+    &-submit {
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 5rem;
+      border: unset;
+      color: $white-color;
+      background-color: $dark-purple;
+
+      &:focus {
+        outline: unset;
+      }
+    }
+  }
+
+  &__more {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+// FOOTER
+.footer {
+  padding-top: 20rem;
+  background-color: $dark-purple;
+  position: relative;
+
+  &__company {
+    text-align: center;
+
+    &-address {
+      margin-top: 1rem;
+      color: $light-gray;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &-email {
+      color: $light-gray;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__options {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white-color;
+    padding: 1rem 5rem;
+    border-bottom: 1px solid $light-gray;
+  }
+
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 5rem;
+  }
+
+  &__download {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &-android,
+    &-apple,
+    &-playStore {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.2rem 1rem;
+      background-color: $green-color;
+      color: $white-color;
+      border-radius: 10px;
+      border: 2px solid $white-color;
+      .flex {
+        display: flex;
+        flex-direction: column;
+      }
+
+      & p {
+        font-size: 0.8rem;
+      }
+
+      & h2 {
+        font-size: 1rem;
+      }
+    }
+
+    &-apple,
+    &-playStore {
+      background-color: $black-color;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    [class^="fab"] {
+      border-radius: 50%;
+      padding: 0.5rem;
+      background-color: rgba($light-gray, 0.5);
+    }
+  }
+
+  &__footer {
+    margin-top: 8rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    color: $white-color;
+
+    span {
+      color: $purple-color;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__games {
+    display: flex;
+    gap: 5rem;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-instant,
+    &-live {
+      width: 25rem;
+      padding: 1rem 2rem;
+      color: rgba(black, 0.8);
+    }
+
+    p {
+      color: $white-color;
+    }
+
+    &-instant {
+      background-image: url(../../images/phone.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: contain;
+      background-position: center;
+    }
+
+    &-live {
+      background-image: url(../../images/roll-dice.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: contain;
+      background-position: center;
+    }
+
+    &-live--btn {
+      margin-top: 2rem;
+      background-color: yellow;
+      border: 1px solid white;
+      color: $white-color;
+      font-weight: bold;
+    }
+
+    &-instant--btn {
+      margin-top: 2rem;
+      background-color: $purple-color;
+      border: 1px solid white;
+      color: $white-color;
+      font-weight: bold;
+    }
+  }
+}

@@ -9,4 +9,9 @@
   cursor: pointer;
   padding: 0.8rem 1.2rem;
   background-color: transparent;
+
+  @include respond(sm-phone) {
+    font-size: 0.5rem;
+    padding: 0.6rem 1rem;
+  }
 }

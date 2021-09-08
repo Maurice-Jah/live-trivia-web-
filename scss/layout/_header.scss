@@ -1,7 +1,6 @@
 .header {
   position: sticky;
   position: -webkit-sticky;
-  position: sticky;
   top: 0;
   z-index: 1000;
   background-color: $dark-purple;
@@ -11,14 +10,29 @@
   justify-content: space-between;
   padding: 1rem 5rem;
 
+  @include respond(sm-phone) {
+    background: $white-color;
+    padding: 1rem;
+  }
+
   &__title {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.05rem;
+
+    @include respond(sm-phone) {
+      color: $black-color;
+      font-size: 1rem;
+    }
   }
   &__link {
     display: flex;
     align-items: center;
+
+    @include respond(sm-phone) {
+      border: 2px solid red;
+      display: none;
+    }
 
     &-item {
       padding: 0.5rem 1.2rem;

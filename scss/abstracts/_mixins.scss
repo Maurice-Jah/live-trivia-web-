@@ -1,0 +1,89 @@
+// Responsive
+// Media query
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
+// MEDIA QUERY MANAGER
+
+/*
+  0 - 600px : Phone
+  600 - 768px : portrait tablets 
+  768px - 992px : landscape tablets
+  992px - 1200px: mini-laptops/desktops
+  1200 - 1800px : laptops .....my desktop
+  1800px+: Big desktops
+  */
+
+/*
+  
+  $breakpoints 
+  -phone
+  -tab-port
+  -tab-land
+  -mini-lap
+  -desktop
+  -big-desktop
+  
+  */
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == smallest {
+    @media only screen and (max-width: 22.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm-phone {
+    @media only screen and (max-width: 25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 62em) {
+      @content;
+    }
+  }
+  @if $breakpoint == mini-lap {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 112.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

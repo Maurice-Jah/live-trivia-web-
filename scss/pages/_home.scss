@@ -9,12 +9,26 @@
   height: 75vh;
   position: relative;
 
+  @include respond(sm-phone) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80% 100%;
+    height: 50vh;
+  }
+
   &__text {
     position: absolute;
     top: 60%;
     left: 15%;
     font-size: 3rem;
     font-weight: 700;
+
+    @include respond(sm-phone) {
+      font-size: 1.5rem;
+      left: 5%;
+      width: 40%;
+      top: 75%;
+    }
   }
 
   &__btn {
@@ -27,6 +41,10 @@
     padding: 1.2rem 2.2rem;
     font-size: 1.5rem;
     font-weight: bold;
+
+    @include respond(sm-phone) {
+      display: none;
+    }
   }
 }
 
@@ -35,6 +53,10 @@
 .features {
   &-text {
     font-size: 1.7rem;
+
+    @include respond(sm-phone) {
+      font-size: 1rem;
+    }
 
     span {
       color: $purple-color;
@@ -48,29 +70,56 @@
     display: flex;
     gap: 10rem;
 
+    @include respond(sm-phone) {
+      margin-top: 5rem;
+      margin-bottom: 2rem;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
     &__text {
       border-top: 3px solid $purple-color;
       padding-top: 1.3rem;
 
+      @include respond(sm-phone) {
+        order: 1;
+      }
+
       &-main {
         padding: 1rem 0;
+        @include respond(sm-phone) {
+          font-size: 0.8rem;
+        }
       }
 
       &-sub {
         width: 80%;
         font-size: 0.9rem;
         color: $light-gray;
+
+        @include respond(sm-phone) {
+          font-size: 0.7rem;
+        }
       }
 
       &-btn {
         margin-top: 3rem;
         font-weight: 800;
+
+        @include respond(sm-phone) {
+          margin-top: 1rem;
+        }
       }
     }
 
     &__image {
       width: 35rem;
       height: 22rem;
+
+      @include respond(sm-phone) {
+        width: 15rem;
+        height: 12rem;
+      }
 
       &-img {
         width: 100%;
@@ -83,13 +132,39 @@
       gap: 10rem;
       margin-top: 15rem;
 
+      @include respond(sm-phone) {
+        margin-top: 5rem;
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      &-image {
+        @include respond(sm-phone) {
+          width: 15rem;
+          height: 12rem;
+        }
+
+        &--img {
+          width: 100%;
+        }
+      }
+
       &-text {
         border-top: 3px solid $purple-color;
         padding: 1.3rem 6rem;
         padding-left: 9rem;
         padding-right: 0rem;
+
+        @include respond(sm-phone) {
+          padding-left: 0;
+        }
+
         &--main {
           padding: 1rem 0;
+
+          @include respond(sm-phone) {
+            font-size: 0.8rem;
+          }
         }
 
         &--sub {
@@ -97,6 +172,11 @@
           color: $light-gray;
           margin-bottom: 1rem;
           font-size: 0.9rem;
+
+          @include respond(sm-phone) {
+            font-size: 0.7rem;
+            margin-top: 0rem;
+          }
         }
       }
     }
@@ -106,6 +186,13 @@
       margin-bottom: 5rem;
       display: flex;
       gap: 10rem;
+
+      @include respond(sm-phone) {
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        flex-direction: column;
+        gap: 3rem;
+      }
 
       &-text {
         border-top: 3px solid $purple-color;
@@ -122,6 +209,21 @@
         &--btn {
           margin-top: 3rem;
           font-weight: 800;
+
+          @include respond(sm-phone) {
+            margin-top: 1rem;
+          }
+        }
+      }
+      &-image {
+        @include respond(sm-phone) {
+          width: 15rem;
+          height: 10rem;
+        }
+
+        &--img {
+          width: 100%;
+          height: 100%;
         }
       }
     }
@@ -138,11 +240,23 @@
     gap: 8rem;
     margin-top: 8rem;
 
+    @include respond(sm-phone) {
+      flex-direction: column;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
     &-image {
       width: 50rem;
       padding: 1.3rem 1rem 1.3rem 0rem;
       background-color: $purple-color;
       border-radius: 5px;
+
+      @include respond(sm-phone) {
+        width: 14rem;
+        padding: 0rem 0.4rem 0.4rem 0rem;
+        order: 1;
+      }
 
       &--pix {
         width: 100%;
@@ -150,6 +264,23 @@
         display: block;
         margin-left: 15%;
         border-radius: 5px;
+
+        @include respond(sm-phone) {
+          margin-left: 0%;
+        }
+      }
+    }
+    &-text {
+      &-main {
+        @include respond(sm-phone) {
+          font-size: 1rem;
+        }
+      }
+      &-sub {
+        @include respond(sm-phone) {
+          font-size: 0.6rem;
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -159,11 +290,23 @@
     gap: 8rem;
     margin-top: 8rem;
 
+    @include respond(sm-phone) {
+      flex-direction: column;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
     &-image {
       width: 50rem;
       padding: 1.3rem 1rem 1.3rem 0rem;
       background-color: $purple-color;
       border-radius: 5px;
+
+      @include respond(sm-phone) {
+        width: 14rem;
+        padding: 0rem 0rem 0.4rem 0.4rem;
+        order: 1;
+      }
 
       &--pix {
         width: 100%;
@@ -171,6 +314,24 @@
         display: block;
         margin-left: -15%;
         border-radius: 5px;
+
+        @include respond(sm-phone) {
+          margin-left: 0%;
+        }
+      }
+    }
+
+    &-text {
+      &-main {
+        @include respond(sm-phone) {
+          font-size: 1rem;
+        }
+      }
+      &-sub {
+        @include respond(sm-phone) {
+          font-size: 0.6rem;
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -180,17 +341,47 @@
     gap: 8rem;
     margin-top: 8rem;
 
+    @include respond(sm-phone) {
+      flex-direction: column;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
     &-image {
       width: 100rem;
       padding: 1.3rem 1rem 1.3rem 0rem;
       background-color: $purple-color;
       border-radius: 5px;
 
+      @include respond(sm-phone) {
+        width: 14rem;
+        padding: 0rem 0.4rem 0.4rem 0rem;
+        order: 1;
+      }
+
       &--pix {
         width: 100%;
         display: block;
         margin-left: 15%;
         border-radius: 5px;
+
+        @include respond(sm-phone) {
+          margin-left: 0%;
+        }
+      }
+    }
+
+    &-text {
+      &-main {
+        @include respond(sm-phone) {
+          font-size: 1rem;
+        }
+      }
+      &-sub {
+        @include respond(sm-phone) {
+          font-size: 0.6rem;
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -201,14 +392,32 @@
   padding-left: 10rem;
   padding-right: 10rem;
 
+  @include respond(sm-phone) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   &__president {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 7rem;
 
+    @include respond(sm-phone) {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      flex-direction: column;
+    }
+
     &-image {
       width: 23rem;
       height: 23rem;
+
+      @include respond(sm-phone) {
+        width: 15rem;
+        height: 15rem;
+      }
 
       &--pix {
         width: 100%;
@@ -219,6 +428,10 @@
 
     &-bio {
       width: 90%;
+
+      @include respond(sm-phone) {
+        width: 100%;
+      }
 
       &--title {
         color: $black-color;
@@ -237,9 +450,22 @@
     gap: 7rem;
     margin-top: 5rem;
 
+    @include respond(sm-phone) {
+      display: flex;
+      gap: 1rem;
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      flex-direction: column;
+    }
+
     &-image {
       width: 23rem;
       height: 23rem;
+
+      @include respond(sm-phone) {
+        width: 15rem;
+        height: 15rem;
+      }
 
       &--pix {
         width: 100%;
@@ -249,6 +475,10 @@
 
     &-bio {
       width: 100%;
+
+      @include respond(sm-phone) {
+        order: 1;
+      }
 
       &--title {
         color: $black-color;
@@ -271,25 +501,58 @@
   background-color: $dark-purple;
   padding: 0;
 
+  @include respond(sm-phone) {
+    margin-top: 3rem;
+    flex-direction: column;
+    padding-bottom: 3rem;
+  }
+
   &__text {
     color: $white-color;
     padding-left: 5rem;
 
+    @include respond(sm-phone) {
+      padding: 1rem;
+    }
+    &-main {
+      @include respond(sm-phone) {
+        font-size: 0.8rem;
+        margin-top: 2rem;
+        text-transform: capitalize;
+      }
+    }
     &-sub {
       margin-top: 2rem;
       width: 60%;
+
+      @include respond(sm-phone) {
+        width: 100%;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+      }
     }
   }
 
   &__btn {
     color: $white-color;
     margin-top: 2rem;
+
+    @include respond(sm-phone) {
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+      border: 1px solid $white-color;
+    }
   }
 
   &__image {
     position: relative;
     width: 100rem;
     height: 24rem;
+
+    @include respond(sm-phone) {
+      width: 100%;
+      height: 10rem;
+    }
 
     &-pix {
       width: 100%;
@@ -305,6 +568,14 @@
     width: 3rem;
     top: 30%;
     left: -7.5%;
+
+    @include respond(sm-phone) {
+      top: -4%;
+      left: 50%;
+      height: 0.8rem;
+      width: 12rem;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
@@ -318,6 +589,14 @@
   position: relative;
   padding-bottom: 20rem;
 
+  @include respond(sm-phone) {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 10rem;
+    border: 2px solid green;
+  }
+
   &__text {
     &-main {
       margin-bottom: 0.5rem;
@@ -325,6 +604,10 @@
 
     &-sub {
       margin-bottom: 1.5rem;
+
+      @include respond(sm-phone) {
+        font-size: 0.7rem;
+      }
 
       .emphasis {
         color: red;
@@ -341,6 +624,10 @@
     &-email {
       padding: 1rem;
       font-size: 1rem;
+
+      @include respond(sm-phone) {
+        padding: 0.5rem;
+      }
 
       &:focus {
         outline: unset;
@@ -367,6 +654,30 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+
+    @include respond(sm-phone) {
+      position: relative;
+      bottom: 0%;
+      left: 0%;
+      transform: none;
+      background-color: #c4c4c4;
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+      padding: 5rem 1rem;
+    }
+
+    &-main {
+      @include respond(sm-phone) {
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    &-sub {
+      @include respond(sm-phone) {
+        font-size: 0.7rem;
+      }
+    }
   }
 }
 
@@ -375,6 +686,11 @@
   padding-top: 20rem;
   background-color: $dark-purple;
   position: relative;
+
+  @include respond(sm-phone) {
+    margin-top: 10rem;
+    padding-top: 3rem;
+  }
 
   &__company {
     text-align: center;
@@ -400,18 +716,39 @@
     color: $white-color;
     padding: 1rem 5rem;
     border-bottom: 1px solid $light-gray;
+    @include respond(sm-phone) {
+      font-size: 0.7rem;
+      padding-top: 3rem;
+      justify-content: center;
+    }
+    &-main {
+      @include respond(sm-phone) {
+        display: none;
+      }
+    }
   }
 
   .contacts {
     display: flex;
     justify-content: space-between;
     margin: 1rem 5rem;
+
+    @include respond(sm-phone) {
+      margin: 5rem 0.5rem;
+      flex-direction: column;
+    }
   }
 
   &__download {
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    @include respond(sm-phone) {
+      flex-wrap: wrap;
+
+      border: 2px solid blue;
+    }
 
     &-android,
     &-apple,
@@ -425,6 +762,7 @@
       color: $white-color;
       border-radius: 10px;
       border: 2px solid $white-color;
+
       .flex {
         display: flex;
         flex-direction: column;
@@ -436,9 +774,25 @@
 
       & h2 {
         font-size: 1rem;
+        @include respond(sm-phone) {
+          font-size: 0.5rem;
+        }
       }
     }
 
+    &-android,
+    &-apple {
+      @include respond(sm-phone) {
+        // padding: 0.3rem;
+      }
+    }
+
+    &-playStore {
+      @include respond(sm-phone) {
+        // padding: 0.2rem;
+        order: 1;
+      }
+    }
     &-apple,
     &-playStore {
       background-color: $black-color;
@@ -451,10 +805,18 @@
     justify-content: center;
     gap: 0.8rem;
 
+    @include respond(sm-phone) {
+      margin-top: 2rem;
+    }
+
     [class^="fab"] {
       border-radius: 50%;
       padding: 0.5rem;
       background-color: rgba($light-gray, 0.5);
+
+      @include respond(sm-phone) {
+        padding: 0.2rem;
+      }
     }
   }
 
@@ -464,9 +826,18 @@
     text-align: center;
     color: $white-color;
 
+    @include respond(sm-phone) {
+      margin-top: 1rem;
+      font-size: 0.6rem;
+    }
+
     span {
       color: $purple-color;
       font-size: 1.3rem;
+
+      @include respond(sm-phone) {
+        font-size: 0.6rem;
+      }
     }
   }
 
@@ -478,11 +849,27 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    @include respond(sm-phone) {
+      flex-direction: column;
+      top: -55.5%;
+      left: 0%;
+      gap: 2rem;
+      transform: none;
+      border: 2px solid red;
+    }
+
     &-instant,
     &-live {
       width: 25rem;
       padding: 1rem 2rem;
       color: rgba(black, 0.8);
+
+      @include respond(sm-phone) {
+        // width: 15rem;
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 0.6rem;
+      }
     }
 
     p {
@@ -495,6 +882,9 @@
       background-size: cover;
       object-fit: contain;
       background-position: center;
+
+      @include respond(sm-phone) {
+      }
     }
 
     &-live {

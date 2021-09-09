@@ -71,7 +71,7 @@
   }
 
   &-instant {
-    margin-top: 15rem;
+    margin-top: 10rem;
     margin-bottom: 5rem;
     display: flex;
     gap: 10rem;
@@ -136,7 +136,7 @@
     &__football {
       display: flex;
       gap: 10rem;
-      margin-top: 15rem;
+      margin-top: 10rem;
 
       @include respond(sm-phone) {
         margin-top: 5rem;
@@ -188,7 +188,7 @@
     }
 
     &__music {
-      margin-top: 15rem;
+      margin-top: 10rem;
       margin-bottom: 5rem;
       display: flex;
       gap: 10rem;
@@ -911,6 +911,7 @@
       }
 
       &--heading {
+        color: $white-color;
         @include respond(sm-phone) {
           color: $white-color;
           padding-left: 2rem;
@@ -932,6 +933,8 @@
 
     &-instant {
       background-image: url(../../images/phone.png);
+      background-color: $dark-yellow;
+      background-blend-mode: multiply;
       background-repeat: no-repeat;
       background-size: cover;
       object-fit: contain;
@@ -948,6 +951,8 @@
 
     &-live {
       background-image: url(../../images/roll-dice.png);
+      background-color: $light-gray;
+      background-blend-mode: multiply;
       background-repeat: no-repeat;
       background-size: cover;
       object-fit: contain;
@@ -964,7 +969,7 @@
 
     &-live--btn {
       margin-top: 2rem;
-      background-color: yellow;
+      background-color: $dark-yellow;
       border: 1px solid white;
       color: $white-color;
       font-weight: bold;

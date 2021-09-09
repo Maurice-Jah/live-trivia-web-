@@ -93,7 +93,8 @@ section {
   @media only screen and (max-width: 25em) {
     .header {
       background: #fff;
-      padding: 1rem; } }
+      padding: 1rem;
+      display: none; } }
   .header__title {
     font-size: 1.5rem;
     font-weight: 700;
@@ -117,6 +118,130 @@ section {
       padding: 0.5rem 1.2rem; }
       .header__link-item > * {
         color: #fff; }
+
+.navigation {
+  color: white;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  z-index: 9000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  visibility: hidden;
+  border: 2px solid black; }
+  @media only screen and (max-width: 25em) {
+    .navigation {
+      visibility: visible; } }
+  .navigation__text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    padding: 1rem; }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    background-color: white;
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    top: 01rem;
+    right: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-box-shadow: 0rem 0.1rem 3rem rgba(255, 255, 255, 0.1);
+            box-shadow: 0rem 0.1rem 3rem rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    z-index: 8000; }
+  .navigation__nav {
+    height: 70vh;
+    width: 15%;
+    position: fixed;
+    top: 0rem;
+    right: 0;
+    z-index: 3000;
+    border: 2px solid white;
+    opacity: 0;
+    width: 0;
+    -webkit-transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    @media only screen and (max-width: 25em) {
+      .navigation__nav {
+        height: 50vh; } }
+  .navigation__list {
+    list-style-type: none; }
+  .navigation__item {
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .navigation__link:link, .navigation__link:visited {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    padding: 0.2rem 1rem;
+    color: black;
+    background-image: -o-linear-gradient(330deg, transparent 0%, transparent 50%, black 50%);
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, black 50%);
+    background-size: 300%;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
+    @media only screen and (max-width: 25em) {
+      .navigation__link:link, .navigation__link:visited {
+        font-size: 1.1rem; } }
+  .navigation__link:hover, .navigation__link:active {
+    background-position: 100%;
+    color: #fff;
+    -webkit-transform: translateY(0.3rem);
+        -ms-transform: translateY(0.3rem);
+            transform: translateY(0.3rem); }
+  .navigation__checkbox:checked {
+    opacity: 0;
+    width: 0; }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    position: absolute;
+    opacity: 1;
+    width: 50%;
+    background-color: white; }
+  .navigation__icon {
+    position: relative;
+    margin-top: 1rem; }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      width: 1rem;
+      height: 2px;
+      background-color: gray;
+      display: inline-block; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+    .navigation__icon::before {
+      top: -0.3rem; }
+    .navigation__icon::after {
+      top: 0.3rem; }
+  .navigation__button:hover .navigation__icon::before {
+    top: -0.45rem; }
+  .navigation__button:hover .navigation__icon::after {
+    top: 0.45rem; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background-color: transparent; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg); }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    -webkit-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+            transform: rotate(-135deg); }
 
 @media only screen and (max-width: 25em) {
   body {
@@ -176,7 +301,7 @@ section {
     font-weight: bold; }
 
 .features-instant {
-  margin-top: 15rem;
+  margin-top: 10rem;
   margin-bottom: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,7 +357,7 @@ section {
     display: -ms-flexbox;
     display: flex;
     gap: 10rem;
-    margin-top: 15rem; }
+    margin-top: 10rem; }
     @media only screen and (max-width: 25em) {
       .features-instant__football {
         margin-top: 5rem;
@@ -270,7 +395,7 @@ section {
             font-size: 0.7rem;
             margin-top: 0rem; } }
   .features-instant__music {
-    margin-top: 15rem;
+    margin-top: 10rem;
     margin-bottom: 5rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -902,10 +1027,12 @@ section {
           width: 100%;
           padding: 0.5rem;
           font-size: 0.6rem; } }
-      @media only screen and (max-width: 25em) {
-        .footer__games-instant--heading, .footer__games-live--heading {
-          color: #fff;
-          padding-left: 2rem; } }
+      .footer__games-instant--heading, .footer__games-live--heading {
+        color: #fff; }
+        @media only screen and (max-width: 25em) {
+          .footer__games-instant--heading, .footer__games-live--heading {
+            color: #fff;
+            padding-left: 2rem; } }
       @media only screen and (max-width: 25em) {
         .footer__games-instant--sub, .footer__games-live--sub {
           color: #fff;
@@ -915,6 +1042,8 @@ section {
       color: #fff; }
     .footer__games-instant {
       background-image: url(../../images/phone.png);
+      background-color: #d07000;
+      background-blend-mode: multiply;
       background-repeat: no-repeat;
       background-size: cover;
       -o-object-fit: contain;
@@ -926,6 +1055,8 @@ section {
           background: linear-gradient(111.47deg, #000000 6.61%, rgba(0, 0, 0, 0) 64.11%); } }
     .footer__games-live {
       background-image: url(../../images/roll-dice.png);
+      background-color: #808080;
+      background-blend-mode: multiply;
       background-repeat: no-repeat;
       background-size: cover;
       -o-object-fit: contain;
@@ -937,7 +1068,7 @@ section {
           background: linear-gradient(90.16deg, rgba(3, 3, 3, 0.63) 6.81%, rgba(0, 41, 255, 0) 82.18%); } }
     .footer__games-live--btn {
       margin-top: 2rem;
-      background-color: yellow;
+      background-color: #d07000;
       border: 1px solid white;
       color: #fff;
       font-weight: bold; }

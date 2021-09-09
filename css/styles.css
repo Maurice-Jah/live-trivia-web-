@@ -118,6 +118,10 @@ section {
       .header__link-item > * {
         color: #fff; }
 
+@media only screen and (max-width: 25em) {
+  body {
+    overflow-x: hidden; } }
+
 .hero {
   background-color: #000;
   color: #fff;
@@ -613,8 +617,7 @@ section {
           -ms-flex-direction: column;
               flex-direction: column;
       gap: 3rem;
-      padding-bottom: 10rem;
-      border: 2px solid green; } }
+      padding-bottom: 10rem; } }
   .newsletter__text-main {
     margin-bottom: 0.5rem; }
   .newsletter__text-sub {
@@ -746,9 +749,12 @@ section {
     gap: 1rem; }
     @media only screen and (max-width: 25em) {
       .footer__download {
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        border: 2px solid blue; } }
+            flex-wrap: wrap; }
+        .footer__download a {
+          display: block; } }
     .footer__download-android, .footer__download-apple, .footer__download-playStore {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -765,6 +771,14 @@ section {
       color: #fff;
       border-radius: 10px;
       border: 2px solid #fff; }
+      .footer__download-android .inner, .footer__download-apple .inner, .footer__download-playStore .inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 1rem; }
       .footer__download-android .flex, .footer__download-apple .flex, .footer__download-playStore .flex {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -775,16 +789,47 @@ section {
                 flex-direction: column; }
       .footer__download-android p, .footer__download-apple p, .footer__download-playStore p {
         font-size: 0.8rem; }
+        @media only screen and (max-width: 25em) {
+          .footer__download-android p, .footer__download-apple p, .footer__download-playStore p {
+            font-size: 0.6rem; } }
       .footer__download-android h2, .footer__download-apple h2, .footer__download-playStore h2 {
         font-size: 1rem; }
         @media only screen and (max-width: 25em) {
           .footer__download-android h2, .footer__download-apple h2, .footer__download-playStore h2 {
-            font-size: 0.5rem; } }
+            font-size: 0.6rem; } }
+    @media only screen and (max-width: 25em) {
+      .footer__download-android, .footer__download-apple {
+        padding: 0.4rem 0.8rem; }
+        .footer__download-android [class^="fab"], .footer__download-apple [class^="fab"] {
+          display: block;
+          margin-right: 0.8rem; }
+        .footer__download-android .inner, .footer__download-apple .inner {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          gap: 0; } }
     @media only screen and (max-width: 25em) {
       .footer__download-playStore {
+        padding: 0.5rem 1rem;
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
-                order: 1; } }
+                order: 1;
+        margin-top: 1.5rem;
+        margin-left: auto;
+        margin-right: auto; }
+        .footer__download-playStore [class^="fab"] {
+          display: block;
+          margin-right: 0rem; }
+        .footer__download-playStore .inner {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
     .footer__download-apple, .footer__download-playStore {
       background-color: #000; }
   .footer__social {
@@ -800,7 +845,7 @@ section {
     gap: 0.8rem; }
     @media only screen and (max-width: 25em) {
       .footer__social {
-        margin-top: 2rem; } }
+        margin-top: 4rem; } }
     .footer__social [class^="fab"] {
       border-radius: 50%;
       padding: 0.5rem;
@@ -846,7 +891,8 @@ section {
         -webkit-transform: none;
             -ms-transform: none;
                 transform: none;
-        border: 2px solid red; } }
+        padding-bottom: 3rem;
+        background-color: #c4c4c4; } }
     .footer__games-instant, .footer__games-live {
       width: 25rem;
       padding: 1rem 2rem;
@@ -856,6 +902,15 @@ section {
           width: 100%;
           padding: 0.5rem;
           font-size: 0.6rem; } }
+      @media only screen and (max-width: 25em) {
+        .footer__games-instant--heading, .footer__games-live--heading {
+          color: #fff;
+          padding-left: 2rem; } }
+      @media only screen and (max-width: 25em) {
+        .footer__games-instant--sub, .footer__games-live--sub {
+          color: #fff;
+          padding-left: 1rem;
+          padding-right: 3rem; } }
     .footer__games p {
       color: #fff; }
     .footer__games-instant {
@@ -865,6 +920,10 @@ section {
       -o-object-fit: contain;
          object-fit: contain;
       background-position: center; }
+      @media only screen and (max-width: 25em) {
+        .footer__games-instant {
+          background: -o-linear-gradient(338.53deg, #000000 6.61%, rgba(0, 0, 0, 0) 64.11%);
+          background: linear-gradient(111.47deg, #000000 6.61%, rgba(0, 0, 0, 0) 64.11%); } }
     .footer__games-live {
       background-image: url(../../images/roll-dice.png);
       background-repeat: no-repeat;
@@ -872,15 +931,27 @@ section {
       -o-object-fit: contain;
          object-fit: contain;
       background-position: center; }
+      @media only screen and (max-width: 25em) {
+        .footer__games-live {
+          background: -o-linear-gradient(359.84deg, rgba(3, 3, 3, 0.63) 6.81%, rgba(0, 41, 255, 0) 82.18%);
+          background: linear-gradient(90.16deg, rgba(3, 3, 3, 0.63) 6.81%, rgba(0, 41, 255, 0) 82.18%); } }
     .footer__games-live--btn {
       margin-top: 2rem;
       background-color: yellow;
       border: 1px solid white;
       color: #fff;
       font-weight: bold; }
+      @media only screen and (max-width: 25em) {
+        .footer__games-live--btn {
+          background-color: #d07000;
+          margin-left: 1rem; } }
     .footer__games-instant--btn {
       margin-top: 2rem;
       background-color: #8a2be2;
       border: 1px solid white;
       color: #fff;
       font-weight: bold; }
+      @media only screen and (max-width: 25em) {
+        .footer__games-instant--btn {
+          background-color: #413dfc;
+          margin-left: 1rem; } }

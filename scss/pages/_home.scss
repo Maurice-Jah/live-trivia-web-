@@ -1,3 +1,9 @@
+@include respond(sm-phone) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
 .hero {
   background-color: $black-color;
   color: $white-color;
@@ -594,7 +600,6 @@
     flex-direction: column;
     gap: 3rem;
     padding-bottom: 10rem;
-    border: 2px solid green;
   }
 
   &__text {
@@ -745,9 +750,12 @@
     gap: 1rem;
 
     @include respond(sm-phone) {
-      flex-wrap: wrap;
+      a {
+        display: block;
+      }
 
-      border: 2px solid blue;
+      justify-content: space-around;
+      flex-wrap: wrap;
     }
 
     &-android,
@@ -763,6 +771,12 @@
       border-radius: 10px;
       border: 2px solid $white-color;
 
+      .inner {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
       .flex {
         display: flex;
         flex-direction: column;
@@ -770,27 +784,52 @@
 
       & p {
         font-size: 0.8rem;
+        @include respond(sm-phone) {
+          font-size: 0.6rem;
+        }
       }
 
       & h2 {
         font-size: 1rem;
         @include respond(sm-phone) {
-          font-size: 0.5rem;
+          font-size: 0.6rem;
         }
       }
     }
-
     &-android,
     &-apple {
       @include respond(sm-phone) {
-        // padding: 0.3rem;
+        padding: 0.4rem 0.8rem;
+
+        [class^="fab"] {
+          display: block;
+          margin-right: 0.8rem;
+        }
+
+        .inner {
+          display: flex;
+          align-items: center;
+          gap: 0;
+        }
       }
     }
-
     &-playStore {
       @include respond(sm-phone) {
-        // padding: 0.2rem;
+        padding: 0.5rem 1rem;
         order: 1;
+        margin-top: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        [class^="fab"] {
+          display: block;
+          margin-right: 0rem;
+        }
+
+        .inner {
+          display: flex;
+          align-items: center;
+        }
       }
     }
     &-apple,
@@ -806,7 +845,7 @@
     gap: 0.8rem;
 
     @include respond(sm-phone) {
-      margin-top: 2rem;
+      margin-top: 4rem;
     }
 
     [class^="fab"] {
@@ -855,7 +894,8 @@
       left: 0%;
       gap: 2rem;
       transform: none;
-      border: 2px solid red;
+      padding-bottom: 3rem;
+      background-color: #c4c4c4;
     }
 
     &-instant,
@@ -865,10 +905,24 @@
       color: rgba(black, 0.8);
 
       @include respond(sm-phone) {
-        // width: 15rem;
         width: 100%;
         padding: 0.5rem;
         font-size: 0.6rem;
+      }
+
+      &--heading {
+        @include respond(sm-phone) {
+          color: $white-color;
+          padding-left: 2rem;
+        }
+      }
+
+      &--sub {
+        @include respond(sm-phone) {
+          color: $white-color;
+          padding-left: 1rem;
+          padding-right: 3rem;
+        }
       }
     }
 
@@ -884,6 +938,11 @@
       background-position: center;
 
       @include respond(sm-phone) {
+        background: linear-gradient(
+          111.47deg,
+          #000000 6.61%,
+          rgba(0, 0, 0, 0) 64.11%
+        );
       }
     }
 
@@ -893,6 +952,14 @@
       background-size: cover;
       object-fit: contain;
       background-position: center;
+
+      @include respond(sm-phone) {
+        background: linear-gradient(
+          90.16deg,
+          rgba(3, 3, 3, 0.63) 6.81%,
+          rgba(0, 41, 255, 0) 82.18%
+        );
+      }
     }
 
     &-live--btn {
@@ -901,6 +968,11 @@
       border: 1px solid white;
       color: $white-color;
       font-weight: bold;
+
+      @include respond(sm-phone) {
+        background-color: $dark-yellow;
+        margin-left: 1rem;
+      }
     }
 
     &-instant--btn {
@@ -909,6 +981,11 @@
       border: 1px solid white;
       color: $white-color;
       font-weight: bold;
+
+      @include respond(sm-phone) {
+        background-color: $blue-color;
+        margin-left: 1rem;
+      }
     }
   }
 }

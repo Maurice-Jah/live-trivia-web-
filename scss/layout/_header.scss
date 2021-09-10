@@ -10,6 +10,11 @@
   justify-content: space-between;
   padding: 1rem 5rem;
 
+  @include respond(phone) {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
   @include respond(sm-phone) {
     background: $white-color;
     padding: 1rem;
@@ -21,6 +26,12 @@
     font-weight: 700;
     letter-spacing: 0.05rem;
 
+    @include respond(phone) {
+      font-size: 0.6rem;
+      font-weight: normal;
+      display: none;
+    }
+
     @include respond(sm-phone) {
       color: $black-color;
       font-size: 1rem;
@@ -31,7 +42,6 @@
     align-items: center;
 
     @include respond(sm-phone) {
-      border: 2px solid red;
       display: none;
     }
 
@@ -46,8 +56,6 @@
 }
 
 // on small screen
-
-// mmmmm
 .navigation {
   color: white;
   background-color: black;

@@ -1,6 +1,11 @@
 section {
   padding: 5rem;
 
+  @include respond(tab-land) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   @include respond(sm-phone) {
     padding: 1.5rem;
   }

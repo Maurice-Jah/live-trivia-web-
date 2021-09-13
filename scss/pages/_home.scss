@@ -888,6 +888,8 @@
     flex-direction: column;
     gap: 3rem;
     padding-bottom: 10rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @include respond(sm-phone) {
@@ -898,6 +900,10 @@
   }
 
   &__text {
+    @include respond(phone) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
     &-main {
       margin-bottom: 0.5rem;
     }
@@ -979,21 +985,7 @@
       left: 0%;
       transform: none;
       background-color: #c4c4c4;
-      margin-left: -2rem;
-      margin-right: -2rem;
-
-      padding: 5rem 1rem;
-    }
-
-    @include respond(sm-phone) {
-      position: relative;
-      bottom: 0%;
-      left: 0%;
-      transform: none;
-      background-color: #c4c4c4;
-      margin-left: -1.5rem;
-      margin-right: -1.5rem;
-      padding: 5rem 1rem;
+      padding: 5rem 2rem;
     }
 
     &-main {
@@ -1023,7 +1015,7 @@
   }
 
   @include respond(sm-phone) {
-    margin-top: 10rem;
+    margin-top: 13rem;
     padding-top: 3rem;
   }
 
@@ -1307,7 +1299,6 @@
     &-live {
       width: 25rem;
       padding: 1rem 2rem;
-      color: rgba(black, 0.8);
 
       @include respond(tab-land) {
         width: 20rem;
